@@ -1,0 +1,19 @@
+<root>
+<color name="primary">#6B5AE0</color>
+<color name="primary_border">#9288DD</color>
+<color name="secondary">#5AE0AE</color>
+<color name="secondary_light">#5CE9B4</color>
+<color name="secondary_highlight">#68EFBD</color>
+<color name="secondary_shadow">#4ECF9F</color>
+<color name="highlight">#DFDDED</color>
+<color name="shadow">#DFDDED</color>
+<color name="radio_active">#00E6FF</color>
+<color name="radio_inactive">#383258</color>
+<color name="radio_bg">#1E1A34</color>
+<color name="radio_bg_highlight">#2B2649</color>
+<color name="radio_bg_shadow">#17132C</color>
+<color name="text">#1E1A34</color>
+<color name="white">#FFFFFF</color>
+<color name="white_fg">#F8F7FE</color>
+<color name="white_fg_shadow">#DFDDED</color>
+</root>
