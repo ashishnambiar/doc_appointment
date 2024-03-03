@@ -1,9 +1,7 @@
 import 'package:doc_appointment/Presentation/Widgets/selectable_tile_widget.dart';
 import 'package:doc_appointment/gen/assets.gen.dart';
 import 'package:doc_appointment/gen/colors.gen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SelectableItemsGridView extends StatefulWidget {
   const SelectableItemsGridView({
