@@ -1,5 +1,6 @@
 import 'package:doc_appointment/Presentation/Pages/home_page.dart';
 import 'package:doc_appointment/gen/colors.gen.dart';
+import 'package:doc_appointment/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,6 +26,12 @@ class MainApp extends StatelessWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(50),
               borderSide: BorderSide.none,
+            ),
+            labelStyle: const TextStyle(
+              color: ColorName.text,
+              fontWeight: FontWeight.w600,
+              fontSize: 12,
+              fontFamily: FontFamily.poppins,
             ),
             contentPadding: const EdgeInsets.symmetric(horizontal: 20),
           ),
@@ -54,15 +61,17 @@ class MainApp extends StatelessWidget {
               }),
             ),
           ),
-          textTheme: TextTheme(
-            bodyLarge: GoogleFonts.poppins().copyWith(
+          textTheme: const TextTheme(
+            bodyLarge: TextStyle(
               color: ColorName.text,
               fontWeight: FontWeight.bold,
+              fontFamily: FontFamily.poppins,
             ),
-            titleMedium: GoogleFonts.poppins().copyWith(
+            titleMedium: TextStyle(
               color: ColorName.text,
               fontWeight: FontWeight.w600,
               fontSize: 18,
+              fontFamily: FontFamily.poppins,
             ),
           ),
         ),

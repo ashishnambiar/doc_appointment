@@ -1,4 +1,5 @@
 import 'package:doc_appointment/gen/colors.gen.dart';
+import 'package:doc_appointment/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
 
 class CommonFormFieldWidget extends StatelessWidget {
@@ -29,7 +30,15 @@ class CommonFormFieldWidget extends StatelessWidget {
         ],
       ),
       child: TextFormField(
-        decoration: InputDecoration(labelText: labelText),
+        decoration: InputDecoration(
+          labelText: labelText,
+          labelStyle: const TextStyle(
+            color: ColorName.text,
+            fontWeight: FontWeight.w600,
+            fontSize: 12,
+            fontFamily: FontFamily.poppins,
+          ),
+        ),
       ),
     );
   }
