@@ -36,6 +36,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSize {
                   ),
                   child: profileImage,
                 ),
+                const SizedBox(width: 15),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,

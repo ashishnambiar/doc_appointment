@@ -1,6 +1,7 @@
 import 'package:doc_appointment/Presentation/Widgets/common_form_field_widget.dart';
 import 'package:doc_appointment/gen/colors.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class BookingFormView extends StatelessWidget {
   const BookingFormView({
@@ -26,7 +27,7 @@ class BookingFormView extends StatelessWidget {
           ),
         ),
         Container(
-          margin: const EdgeInsets.all(20),
+          margin: const EdgeInsets.all(25),
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: ColorName.whiteFg,
@@ -54,7 +55,9 @@ class BookingFormView extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    HapticFeedback.vibrate();
+                  },
                   child: const Text('Book Appointment'),
                 ),
               ),

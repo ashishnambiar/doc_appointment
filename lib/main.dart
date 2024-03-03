@@ -1,6 +1,7 @@
 import 'package:doc_appointment/Presentation/Pages/home_page.dart';
 import 'package:doc_appointment/gen/colors.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MainApp());
@@ -28,30 +29,40 @@ class MainApp extends StatelessWidget {
             contentPadding: const EdgeInsets.symmetric(horizontal: 20),
           ),
           scaffoldBackgroundColor: ColorName.white,
-          elevatedButtonTheme: const ElevatedButtonThemeData(
+          elevatedButtonTheme: ElevatedButtonThemeData(
             style: ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(
+              backgroundColor: const MaterialStatePropertyAll(
                 ColorName.primary,
               ),
-              foregroundColor: MaterialStatePropertyAll(
+              foregroundColor: const MaterialStatePropertyAll(
                 ColorName.white,
               ),
-              textStyle: MaterialStatePropertyAll(
+              textStyle: const MaterialStatePropertyAll(
                 TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                 ),
               ),
-              shadowColor: MaterialStatePropertyAll(
+              shadowColor: const MaterialStatePropertyAll(
                 ColorName.primary,
               ),
-              elevation: MaterialStatePropertyAll(12),
+              elevation: MaterialStateProperty.resolveWith((states) {
+                if (states.contains(MaterialState.pressed)) {
+                  return 5;
+                }
+                return 12;
+              }),
             ),
           ),
-          textTheme: const TextTheme(
-            bodyLarge: TextStyle(
+          textTheme: TextTheme(
+            bodyLarge: GoogleFonts.poppins().copyWith(
               color: ColorName.text,
               fontWeight: FontWeight.bold,
+            ),
+            titleMedium: GoogleFonts.poppins().copyWith(
+              color: ColorName.text,
+              fontWeight: FontWeight.w600,
+              fontSize: 18,
             ),
           ),
         ),

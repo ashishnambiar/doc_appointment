@@ -1,8 +1,10 @@
 import 'package:doc_appointment/Presentation/View/booking_form_view.dart';
+import 'package:doc_appointment/Presentation/View/selectable_items_grid_view.dart';
 import 'package:doc_appointment/Presentation/Widgets/custom_appbar.dart';
 import 'package:doc_appointment/gen/assets.gen.dart';
 import 'package:doc_appointment/gen/colors.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -16,7 +18,9 @@ class HomeView extends StatelessWidget {
         title: 'Misty Simon',
         profileImage: Assets.images.photo.image(),
         trailing: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            HapticFeedback.vibrate();
+          },
           icon: Assets.images.setting.svg(),
         ),
       ),
@@ -29,6 +33,20 @@ class HomeView extends StatelessWidget {
               child: CircleAvatar(
                 backgroundColor: ColorName.primary,
                 radius: 408,
+              ),
+            ),
+            Positioned(
+              top: 553 - 108,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: ColorName.secondary,
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(50),
+                  ),
+                ),
               ),
             ),
             Column(
@@ -72,6 +90,8 @@ class HomeView extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 const BookingFormView(),
+                const SelectableItemsGridView(),
+                const SizedBox(height: 46),
               ],
             ),
           ],
